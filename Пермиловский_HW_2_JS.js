@@ -114,7 +114,7 @@ CheckAge(61)
 
 function CheckAge(age)
 {
-    if (typeof(age) != Number)
+    if (typeof(age) != "number")
         {
             console.log("Error. Invalid type")
         }
@@ -147,4 +147,74 @@ CheckAge(61)
 
 // 3**: Преобразовать 2* таким образом, чтобы значение '2' (строка в которой лежит ТОЛЬКО ЦИФРА) пропускалось, преобразовываясь в number
 
+function CheckAge(age)
+{
+    age = Number(age)
+    if (isNaN(age))
+        {
+            console.log("Error. Invalid type")
+        }
+    // if (typeof(parseInt(age)) != "number")
+    //     {
+    //         console.log("Error. Invalid type")
+    //     }
+    else
+        {
+        age_2 = 18
+        age_3 = 60
+        if (age < age_2)
+        {
+            console.log("You don't have acess cause your age is " + age + ". It's less then ")
+        }
+        else if (age >= age_2 && age < age_3) 
+        {
+            console.log("Welcome!")
+        }
+        else if (age > age_3)
+        {
+            console.log("Keep calm and look Culture channel")
+        }
+        else 
+        {
+            console.log("Technical work")
+        }} 
+}
+
+CheckAge("12f")
+CheckAge(18)
+CheckAge(61)
+
+
 // 4***: Преобразовать задание 3* таким образом, чтобы возраст вводится используя функцию prompt в привязанной верстке
+
+function CheckAge()
+{
+    age = prompt("Проверка возраста", "Введите свой возраст")
+    if (typeof(parseInt(age)) != "number")
+        {
+            console.log("Error. Invalid type")
+        }
+    else
+        {
+        age_2 = 18
+        age_3 = 60
+        if (age < age_2)
+        {
+            console.log("You don't have acess cause your age is " + age + ". It's less then ")
+        }
+        else if (age >= age_2 && age < age_3) 
+        {
+            console.log("Welcome!")
+        }
+        else if (age > age_3)
+        {
+            console.log("Keep calm and look Culture channel")
+        }
+        else 
+        {
+            console.log("Technical work")
+        }} 
+}
+
+CheckAge()
+
